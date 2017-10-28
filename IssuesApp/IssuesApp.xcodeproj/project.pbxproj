@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		630405C21FA46E830090961E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630405C11FA46E830090961E /* AppDelegate.swift */; };
-		630405C41FA46E830090961E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630405C31FA46E830090961E /* ViewController.swift */; };
 		630405C71FA46E830090961E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630405C51FA46E830090961E /* Main.storyboard */; };
 		630405C91FA46E830090961E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 630405C81FA46E830090961E /* Assets.xcassets */; };
 		630405CC1FA46E830090961E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 630405CA1FA46E830090961E /* LaunchScreen.storyboard */; };
+		63BCCF461FA4749300E9DC34 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BCCF451FA4749300E9DC34 /* LoginViewController.swift */; };
 		79A45E2A0F0D3617F0263C66 /* Pods_IssuesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A0B0BC72750EF35F6620E7 /* Pods_IssuesApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +20,11 @@
 		22D5D374A80174AE113C0922 /* Pods-IssuesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssuesApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IssuesApp/Pods-IssuesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		630405BE1FA46E830090961E /* IssuesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IssuesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		630405C11FA46E830090961E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		630405C31FA46E830090961E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		630405C61FA46E830090961E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		630405C81FA46E830090961E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		630405CB1FA46E830090961E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		630405CD1FA46E830090961E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63BCCF451FA4749300E9DC34 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F84E25DFB80F3A8B6B63C82F /* Pods-IssuesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssuesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-IssuesApp/Pods-IssuesApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,14 +61,22 @@
 		630405C01FA46E830090961E /* IssuesApp */ = {
 			isa = PBXGroup;
 			children = (
+				63BCCF441FA4748000E9DC34 /* View */,
 				630405C11FA46E830090961E /* AppDelegate.swift */,
-				630405C31FA46E830090961E /* ViewController.swift */,
 				630405C51FA46E830090961E /* Main.storyboard */,
 				630405C81FA46E830090961E /* Assets.xcassets */,
 				630405CA1FA46E830090961E /* LaunchScreen.storyboard */,
 				630405CD1FA46E830090961E /* Info.plist */,
 			);
 			path = IssuesApp;
+			sourceTree = "<group>";
+		};
+		63BCCF441FA4748000E9DC34 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				63BCCF451FA4749300E9DC34 /* LoginViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		68454698CEDF07FCFBE3AD8E /* Pods */ = {
@@ -223,7 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				630405C41FA46E830090961E /* ViewController.swift in Sources */,
+				63BCCF461FA4749300E9DC34 /* LoginViewController.swift in Sources */,
 				630405C21FA46E830090961E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
