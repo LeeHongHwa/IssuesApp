@@ -1,19 +1,17 @@
 //
-//  API.swift
+//  GitHubAPI.swift
 //  IssuesApp
 //
-//  Created by david on 2017. 10. 28..
+//  Created by david on 2017. 11. 4..
 //  Copyright © 2017년 lyhonghwa. All rights reserved.
 //
 
 import Foundation
 import OAuthSwift
+import Alamofire
+import SwiftyJSON
 
-protocol API {
-    func getToken(handler: @escaping (() -> Void))
-    func tokenRefresh(handler: @escaping (() -> Void))
-}
-
+typealias IssuesResponseHandler = (DataResponse<[Model.Issue]>) -> Void
 
 struct GitHubAPI: API {
     
@@ -57,4 +55,16 @@ struct GitHubAPI: API {
         })
     }
     
+    
+    func repoIssues(owner: String, repo: String, page: Int, handler: @escaping IssuesResponseHandler) {
+        let parameters: Parameters = ["page": page, "state": "all"]
+        GitHubRouter.manager.request(GitHubRouter.repoIssues(owner: owner, repo: repo, parameter: parameters)).responseSwiftyJSON { (dataResponse: DataResponse<JSON>) in
+            let result: DataResponse<[Model.Issue]> = dataResponse.map({ (json: JSON) -> [Model.Issue] in
+                return json.arrayValue.map{ json -> Model.Issue in
+                    return Model.Issue(json: json)
+                }
+            })
+            handler(result)
+        }
+    }
 }

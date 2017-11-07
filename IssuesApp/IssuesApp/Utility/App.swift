@@ -8,6 +8,6 @@
 
 import Foundation
 struct App {
-    //bitbucket 확장을 위해 and App.blabla
+    //bitbucket 확장을 위해 blabla API이다
     static var api: API = GitHubAPI()
 }
