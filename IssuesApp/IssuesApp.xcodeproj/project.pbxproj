@@ -20,6 +20,12 @@
 		63E2BF051FA4812B002D4A67 /* GlobalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2BF041FA4812B002D4A67 /* GlobalState.swift */; };
 		63E2BF071FA482F3002D4A67 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2BF061FA482F3002D4A67 /* API.swift */; };
 		63E2BF091FA483FF002D4A67 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E2BF081FA483FF002D4A67 /* App.swift */; };
+		63E791E31FB5E10B0057742D /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E791E21FB5E10B0057742D /* BookmarkViewController.swift */; };
+		63E791E51FB5E1200057742D /* IssuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E791E41FB5E1200057742D /* IssuesViewController.swift */; };
+		63E791F31FB5EAEF0057742D /* IssueCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E791F11FB5EAEF0057742D /* IssueCollectionViewCell.swift */; };
+		63E791F41FB5EAEF0057742D /* IssueCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E791F21FB5EAEF0057742D /* IssueCollectionViewCell.xib */; };
+		63E791F51FB5F1F80057742D /* LoadMoreFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E791EB1FB5E1560057742D /* LoadMoreFooterView.swift */; };
+		63E791F61FB5F2290057742D /* LoadMoreFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63E791EC1FB5E1560057742D /* LoadMoreFooterView.xib */; };
 		79A45E2A0F0D3617F0263C66 /* Pods_IssuesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 21A0B0BC72750EF35F6620E7 /* Pods_IssuesApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +47,12 @@
 		63E2BF041FA4812B002D4A67 /* GlobalState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalState.swift; sourceTree = "<group>"; };
 		63E2BF061FA482F3002D4A67 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		63E2BF081FA483FF002D4A67 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		63E791E21FB5E10B0057742D /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		63E791E41FB5E1200057742D /* IssuesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssuesViewController.swift; sourceTree = "<group>"; };
+		63E791EB1FB5E1560057742D /* LoadMoreFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreFooterView.swift; sourceTree = "<group>"; };
+		63E791EC1FB5E1560057742D /* LoadMoreFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadMoreFooterView.xib; sourceTree = "<group>"; };
+		63E791F11FB5EAEF0057742D /* IssueCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueCollectionViewCell.swift; sourceTree = "<group>"; };
+		63E791F21FB5EAEF0057742D /* IssueCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IssueCollectionViewCell.xib; sourceTree = "<group>"; };
 		F84E25DFB80F3A8B6B63C82F /* Pods-IssuesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IssuesApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-IssuesApp/Pods-IssuesApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,8 +109,9 @@
 			isa = PBXGroup;
 			children = (
 				630261321FAD7F190093AE18 /* Model */,
-				63E2BF031FA48101002D4A67 /* Utility */,
 				63BCCF441FA4748000E9DC34 /* View */,
+				63E791E11FB5E0CF0057742D /* ViewController */,
+				63E2BF031FA48101002D4A67 /* Utility */,
 				630405C11FA46E830090961E /* AppDelegate.swift */,
 				630405C51FA46E830090961E /* Main.storyboard */,
 				630405C81FA46E830090961E /* Assets.xcassets */,
@@ -111,8 +124,8 @@
 		63BCCF441FA4748000E9DC34 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				63BCCF451FA4749300E9DC34 /* LoginViewController.swift */,
-				6302613C1FAD8DF30093AE18 /* RepoViewController.swift */,
+				63E791EA1FB5E1560057742D /* LoadView */,
+				63E791DF1FB5E06E0057742D /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +138,43 @@
 				63E2BF081FA483FF002D4A67 /* App.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		63E791DE1FB5E0300057742D /* IssueCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				63E791F11FB5EAEF0057742D /* IssueCollectionViewCell.swift */,
+				63E791F21FB5EAEF0057742D /* IssueCollectionViewCell.xib */,
+			);
+			path = IssueCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		63E791DF1FB5E06E0057742D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				63E791DE1FB5E0300057742D /* IssueCollectionViewCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		63E791E11FB5E0CF0057742D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				6302613C1FAD8DF30093AE18 /* RepoViewController.swift */,
+				63BCCF451FA4749300E9DC34 /* LoginViewController.swift */,
+				63E791E21FB5E10B0057742D /* BookmarkViewController.swift */,
+				63E791E41FB5E1200057742D /* IssuesViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		63E791EA1FB5E1560057742D /* LoadView */ = {
+			isa = PBXGroup;
+			children = (
+				63E791EB1FB5E1560057742D /* LoadMoreFooterView.swift */,
+				63E791EC1FB5E1560057742D /* LoadMoreFooterView.xib */,
+			);
+			path = LoadView;
 			sourceTree = "<group>";
 		};
 		68454698CEDF07FCFBE3AD8E /* Pods */ = {
@@ -206,6 +256,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E791F61FB5F2290057742D /* LoadMoreFooterView.xib in Resources */,
+				63E791F41FB5EAEF0057742D /* IssueCollectionViewCell.xib in Resources */,
 				630405CC1FA46E830090961E /* LaunchScreen.storyboard in Resources */,
 				630405C91FA46E830090961E /* Assets.xcassets in Resources */,
 				630405C71FA46E830090961E /* Main.storyboard in Resources */,
@@ -279,11 +331,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63E791F51FB5F1F80057742D /* LoadMoreFooterView.swift in Sources */,
+				63E791E51FB5E1200057742D /* IssuesViewController.swift in Sources */,
+				63E791E31FB5E10B0057742D /* BookmarkViewController.swift in Sources */,
 				63BCCF461FA4749300E9DC34 /* LoginViewController.swift in Sources */,
 				630261391FAD82CA0093AE18 /* GitHubRouter.swift in Sources */,
 				630405C21FA46E830090961E /* AppDelegate.swift in Sources */,
 				63E2BF071FA482F3002D4A67 /* API.swift in Sources */,
 				630261341FAD7F280093AE18 /* Model.swift in Sources */,
+				63E791F31FB5EAEF0057742D /* IssueCollectionViewCell.swift in Sources */,
 				63E2BF091FA483FF002D4A67 /* App.swift in Sources */,
 				6302613B1FAD892F0093AE18 /* DataRequest+Extension.swift in Sources */,
 				630261371FAD82BA0093AE18 /* GitHubAPI.swift in Sources */,
