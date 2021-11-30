@@ -1,0 +1,13 @@
+name: Testflight2
+
+on:
+  push:
+    branches:
+      - test
+
+jobs:
+  build:
+    steps:
+    - name: Test
+      run: |
+        echo hellow world
