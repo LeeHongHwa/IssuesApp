@@ -1,0 +1,11 @@
+name: Testflight
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    steps:
+    - name: Test
+      run: |
+        echo hellow world
